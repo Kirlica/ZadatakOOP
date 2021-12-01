@@ -68,8 +68,8 @@ Kolegij.prototype.polozio = function(student) {
    var indexKolegij = student.upisaniKolegiji.indexOf(this.imeKolegija);
    if (indexKolegij > -1) {
        student.upisaniKolegiji.splice(indexKolegij, 1);
-       student.polozeniKolegiji.push(this.imeKolegija);
    }
+   student.polozeniKolegiji.push(this.imeKolegija);
 };
 
 Kolegij.prototype.izvjesce = function() {
@@ -104,3 +104,4 @@ kolegij1.polozio(student2);
 console.log(student2);
 console.log(kolegij1);
 console.log(kolegij1.izvjesce());
+console.log(student2);
