@@ -3,7 +3,7 @@
 function Osoba(ime, prezime) {
     this.ime = ime || "";
     this.prezime = prezime || "";
-}
+};
 
 Osoba.prototype.izvjesce = function() {
     return `Ja sam ${this.ime} ${this.prezime}. Volim sve sto vole mladi`
@@ -15,7 +15,7 @@ function Student(ime, prezime) {
     Osoba.call(this, ime, prezime);
     this.upisaniKolegiji = [];
     this.polozeniKolegiji = [];
-}
+};
 
 Student.prototype.prijaviIspit = function(kolegij) {
     kolegij.listaStudenataPrijaviliIspit.push(this);
@@ -30,7 +30,7 @@ Profesor.prototype = new Osoba();
 function Profesor(ime, prezime) {
     Osoba.call(this, ime, prezime);
     this.listaKolegija = [];
-}
+};
 
 Profesor.prototype.ocijeniIspit = function(student, kolegij) {
     kolegij.polozio(student);
@@ -46,7 +46,7 @@ function Kolegij(imeKolegija, imeProfesora) {
     this.listaStudenata = [];
     this.listaStudenataPrijaviliIspit = [];
     this.listaStudentaPolozili = [];
-}
+};
 
 Kolegij.prototype.upisiStudenta = function(student) {
     this.listaStudenata.push(student);
